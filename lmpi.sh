@@ -3,6 +3,7 @@
 # ==============================================================================
 # SCRIPT DI POST-INSTALLAZIONE PER LINUX MINT
 # Setup completo di utility, editor, Python, LaTeX e Controllo Versione (Git).
+#
 # Autore: Stefano Peris
 # Github: https://github.com/RetroFloppy77
 # email: stefanoperis.github@gmail.com

@@ -6,7 +6,7 @@
 #
 # Autore: Stefano Peris
 # Github: https://github.com/RetroFloppy77
-# email: stefanoperis.github@gmail.com
+# email:  stefanoperis.github@gmail.com
 # ==============================================================================
 
 # Blocco di sicurezza: interrompe lo script in caso di errori imprevisti

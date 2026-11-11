@@ -150,7 +150,7 @@ flatpak install flathub com.vscodium.codium -y
 flatpak install flathub com.jgraph.drawio.desktop -y
 
 # LibreSprite (Editor di pixel art e animazioni)
-flatpak install flathub ar.gertgermeraad.LibreSprite -y
+flatpak install flathub com.github.libresprite.LibreSprite -y
 
 # ------------------------------------------------------------------------------
 # PULIZIA FINALE E CONFIGURAZIONE FACOLTATIVA DI GIT

@@ -1,4 +1,4 @@
-# Documentazione Script ## Post-Installazione
+# Documentazione Script
 
 ---
 

@@ -1,4 +1,4 @@
-# Linux Mint Post-Installer
+# LINUX MINT GPL-3.0 license
 
 ---
 
@@ -10,7 +10,7 @@
 | **🐙 GitHub** | [RetroFloppy77](https://github.com/RetroFloppy77) |
 | **✉️ Email** | `stefanoperis.github@gmail.com` |
 | **🐧 OS Supportato** | Linux Mint, Ubuntu e derivate Debian-based |
-| **📜 Licenza** | MIT |
+| **📜 Licenza** | GPL-3.0 |
 
 ---
 
@@ -24,7 +24,21 @@ Inoltre, gestisce in modo sicuro le configurazioni utente (come `pipx` e l'impos
 
 ## 🚀 Guida all'Uso da Terminale
 
-### Assegnazione dei Permessi di Esecuzione
+Segui questi passaggi per scaricare, configurare ed eseguire lo script sul tuo sistema.
+
+### 1️⃣ Creazione del File Script
+
+Apri il terminale (`Ctrl + Alt + T`) e crea il file `lmpi.sh`:
+
+```bash
+nano lmpi.sh
+```
+
+Incolla il codice dello script all'interno del terminale, poi premi:
+* `Ctrl + O` e invio per salvare.
+* `Ctrl + X` per uscire dall'editor.
+
+### 2️⃣ Assegnazione dei Permessi di Esecuzione
 
 Rendi lo script eseguibile con il comando `chmod`:
 
@@ -115,3 +129,11 @@ sudo ./lmpi.sh
    Verifica automaticamente la presenza del gestore `flatpak` e aggiunge il repository ufficiale **Flathub** qualora non fosse già attivo sul sistema.
 4. **Pulizia Automatica finale**:
    Al termine dell'installazione dei pacchetti, lo script effettua la pulizia delle dipendenze non più necessarie e della cache dei pacchetti tramite `apt autoremove -y` e `apt clean`.
+
+---
+
+## 📜 Licenza
+
+Questo progetto è distribuito sotto la licenza **GNU General Public License v3.0 (GPL-3.0)**. 
+
+Sei libero di distribuire, modificare e utilizzare questo script per qualsiasi scopo, a patto che qualsiasi opera derivata sia distribuita sotto la medesima licenza e mantenga i riferimenti all'autore originale. Per maggiori dettagli, consulta il testo completo della licenza su [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html).

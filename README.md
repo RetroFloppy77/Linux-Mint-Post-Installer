@@ -1,4 +1,4 @@
-# LINUX MINT GPL-3.0 license
+# LINUX MINT POST-INSTALLER
 
 ---
 

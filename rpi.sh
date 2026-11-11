@@ -2,7 +2,7 @@
 
 # ==============================================================================
 # SCRIPT DI POST-INSTALLAZIONE PER RASPBERRY PI 5 (RASPBERRY PI OS)
-# Setup di utility, browser, Python, Lua, Neovim e VSCodium.
+# Setup di utility, browser, Python, Lua, Neovim, Git, Okular e VSCodium.
 #
 # Autore: Stefano Peris
 # Github: https://github.com/RetroFloppy77
@@ -66,7 +66,23 @@ echo "Installazione: Utility per archivi e compressione (zip, unzip, rar, p7zip-
 apt install zip unzip rar p7zip-full -y
 
 # ------------------------------------------------------------------------------
-# 5. AMBIENTE PYTHON (PYTHON 3.12+, PIP, PIPX)
+# 5. CONTROLLO VERSIONE (GIT)
+# ------------------------------------------------------------------------------
+
+echo "Installazione: Git..."
+# git: Sistema di controllo versione distribuito.
+apt install git -y
+
+# ------------------------------------------------------------------------------
+# 6. LETTURA DOCUMENTI E PDF (OKULAR)
+# ------------------------------------------------------------------------------
+
+echo "Installazione: Okular..."
+# okular: Visualizzatore di documenti universale (PDF, EPUB, ecc.).
+apt install okular -y
+
+# ------------------------------------------------------------------------------
+# 7. AMBIENTE PYTHON (PYTHON 3.12+, PIP, PIPX)
 # ------------------------------------------------------------------------------
 
 echo "Installazione: Pacchetti di sistema essenziali per Python 3..."
@@ -82,7 +98,7 @@ echo "Configurazione di pipx per l'utente $REAL_USER..."
 sudo -u "$REAL_USER" pipx ensurepath
 
 # ------------------------------------------------------------------------------
-# 6. LUA E LUAROCKS
+# 8. LUA E LUAROCKS
 # ------------------------------------------------------------------------------
 
 echo "Installazione: Lua e Luarocks..."
@@ -90,7 +106,7 @@ echo "Installazione: Lua e Luarocks..."
 apt install lua5.4 luarocks -y
 
 # ------------------------------------------------------------------------------
-# 7. EDITOR E STRUMENTI DI SVILUPPO
+# 9. EDITOR E STRUMENTI DI SVILUPPO
 # ------------------------------------------------------------------------------
 
 echo "Installazione: Neovim..."
@@ -98,7 +114,7 @@ echo "Installazione: Neovim..."
 apt install neovim -y
 
 # ------------------------------------------------------------------------------
-# 8. PACCHETTI FLATPAK (VSCODIUM)
+# 10. PACCHETTI FLATPAK (VSCODIUM)
 # ------------------------------------------------------------------------------
 
 echo "Installazione pacchetto Flatpak (VSCodium)..."

@@ -2,7 +2,7 @@
 
 # ==============================================================================
 # SCRIPT DI POST-INSTALLAZIONE PER RASPBERRY PI 5 (RASPBERRY PI OS)
-# Setup di utility, browser, Python, Lua, Neovim, Git, Okular e VSCodium.
+# Setup di utility, browser, Python, Lua, Neovim, Micro, Git, Okular e VSCodium.
 #
 # Autore: Stefano Peris
 # Github: https://github.com/RetroFloppy77
@@ -39,7 +39,18 @@ echo "Installazione: Strumenti di compilazione di sistema (build-essential)..."
 apt install build-essential -y
 
 # ------------------------------------------------------------------------------
-# 2. BROWSER WEB
+# 2. TOOLCHAIN DI SVILUPPO C/C++ E SISTEMI DI BUILD
+# ------------------------------------------------------------------------------
+
+echo "Installazione: Strumenti avanzati di compilazione, debug e librerie di sviluppo..."
+# cmake, ninja-build, meson, autoconf, automake, libtool: Sistemi e gestori di build.
+# clang, pkg-config: Compilatore alternativo e utility di configurazione librerie.
+# gdb, valgrind: Strumenti di debugging e analisi della memoria.
+# libssl-dev, zlib1g-dev: Librerie di sviluppo per crittografia e compressione.
+apt install cmake ninja-build meson autoconf automake libtool clang pkg-config gdb valgrind libssl-dev zlib1g-dev -y
+
+# ------------------------------------------------------------------------------
+# 3. BROWSER WEB
 # ------------------------------------------------------------------------------
 
 echo "Installazione: Chromium Browser..."
@@ -47,7 +58,7 @@ echo "Installazione: Chromium Browser..."
 apt install chromium -y
 
 # ------------------------------------------------------------------------------
-# 3. UTILITY E MONITORAGGIO DI SISTEMA
+# 4. UTILITY E MONITORAGGIO DI SISTEMA
 # ------------------------------------------------------------------------------
 
 echo "Installazione: GParted e Htop..."
@@ -56,17 +67,17 @@ echo "Installazione: GParted e Htop..."
 apt install gparted htop -y
 
 # ------------------------------------------------------------------------------
-# 4. GESTIONE ARCHIVI E COMPRESSIONE
+# 5. GESTIONE ARCHIVI E COMPRESSIONE
 # ------------------------------------------------------------------------------
 
-echo "Installazione: Utility per archivi e compressione (zip, unzip, rar, p7zip-full)..."
+echo "Installazione: Utility per archivi e compressione (zip, unzip, unrar, p7zip-full)..."
 # zip, unzip: Creazione ed estrazione di file .zip.
-# rar: Gestione e decompressione di archivi .rar.
+# unrar: Estrazione di archivi .rar.
 # p7zip-full: Strumento di compressione ad alte prestazioni per formati .7z.
-apt install zip unzip rar p7zip-full -y
+apt install zip unzip unrar p7zip-full -y
 
 # ------------------------------------------------------------------------------
-# 5. CONTROLLO VERSIONE (GIT)
+# 6. CONTROLLO VERSIONE (GIT)
 # ------------------------------------------------------------------------------
 
 echo "Installazione: Git..."
@@ -74,7 +85,7 @@ echo "Installazione: Git..."
 apt install git -y
 
 # ------------------------------------------------------------------------------
-# 6. LETTURA DOCUMENTI E PDF (OKULAR)
+# 7. LETTURA DOCUMENTI E PDF (OKULAR)
 # ------------------------------------------------------------------------------
 
 echo "Installazione: Okular..."
@@ -82,7 +93,7 @@ echo "Installazione: Okular..."
 apt install okular -y
 
 # ------------------------------------------------------------------------------
-# 7. AMBIENTE PYTHON (PYTHON 3.12+, PIP, PIPX)
+# 8. AMBIENTE PYTHON (PYTHON 3.12+, PIP, PIPX)
 # ------------------------------------------------------------------------------
 
 echo "Installazione: Pacchetti di sistema essenziali per Python 3..."
@@ -98,7 +109,7 @@ echo "Configurazione di pipx per l'utente $REAL_USER..."
 sudo -u "$REAL_USER" pipx ensurepath
 
 # ------------------------------------------------------------------------------
-# 8. LUA E LUAROCKS
+# 9. LUA E LUAROCKS
 # ------------------------------------------------------------------------------
 
 echo "Installazione: Lua e Luarocks..."
@@ -106,15 +117,16 @@ echo "Installazione: Lua e Luarocks..."
 apt install lua5.4 luarocks -y
 
 # ------------------------------------------------------------------------------
-# 9. EDITOR E STRUMENTI DI SVILUPPO
+# 10. EDITOR E STRUMENTI DI SVILUPPO
 # ------------------------------------------------------------------------------
 
-echo "Installazione: Neovim..."
+echo "Installazione: Neovim e Micro..."
 # neovim: Editor da terminale moderno basato su Lua.
-apt install neovim -y
+# micro: Editor di testo da terminale moderno, intuitivo e con supporto al mouse.
+apt install neovim micro -y
 
 # ------------------------------------------------------------------------------
-# 10. PACCHETTI FLATPAK (VSCODIUM)
+# 11. PACCHETTI FLATPAK (VSCODIUM)
 # ------------------------------------------------------------------------------
 
 echo "Installazione pacchetto Flatpak (VSCodium)..."

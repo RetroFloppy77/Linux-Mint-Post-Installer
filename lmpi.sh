@@ -147,7 +147,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 flatpak install flathub com.vscodium.codium -y
 
 # Draw.io (Creazione di diagrammi e schemi)
-flatpak install flathub com.diagrams.net.drawio -y
+flatpak install flathub com.jgraph.drawio.desktop -y
 
 # LibreSprite (Editor di pixel art e animazioni)
 flatpak install flathub ar.gertgermeraad.LibreSprite -y

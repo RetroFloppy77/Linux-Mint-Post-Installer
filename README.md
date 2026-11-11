@@ -26,19 +26,7 @@ Inoltre, gestisce in modo sicuro le configurazioni utente (come `pipx` e l'impos
 
 Segui questi passaggi per scaricare, configurare ed eseguire lo script sul tuo sistema.
 
-### 1️⃣ Creazione del File Script
-
-Apri il terminale (`Ctrl + Alt + T`) e crea il file `lmpi.sh`:
-
-```bash
-nano lmpi.sh
-```
-
-Incolla il codice dello script all'interno del terminale, poi premi:
-* `Ctrl + O` e invio per salvare.
-* `Ctrl + X` per uscire dall'editor.
-
-### 2️⃣ Assegnazione dei Permessi di Esecuzione
+### Assegnazione dei Permessi di Esecuzione
 
 Rendi lo script eseguibile con il comando `chmod`:
 

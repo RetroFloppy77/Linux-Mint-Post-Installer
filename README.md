@@ -1,4 +1,4 @@
-# Documentazione Script
+# Linux Mint Post-Installer
 
 ---
 
@@ -16,7 +16,7 @@
 
 ## 📖 Descrizione Generale
 
-`lmpi.sh` (Linux Mint Post-Install) è uno script automatizzato in ambiente **Bash** progettato per configurare rapidamente una nuova installazione di Linux Mint o Ubuntu. Lo script automatizza l'aggiornamento del sistema, l'installazione di codec multimediali, strumenti di compilazione, runtime di programmazione, editor di codice e applicazioni grafiche sia tramite il gestore pacchetti nativo **APT** che tramite **Flatpak**.
+`lmpi.sh` (Linux Mint Post-Installer) è uno script automatizzato in ambiente **Bash** progettato per configurare rapidamente una nuova installazione di Linux Mint o Ubuntu. Lo script automatizza l'aggiornamento del sistema, l'installazione di codec multimediali, strumenti di compilazione, runtime di programmazione, editor di codice e applicazioni grafiche sia tramite il gestore pacchetti nativo **APT** che tramite **Flatpak**.
 
 Inoltre, gestisce in modo sicuro le configurazioni utente (come `pipx` e l'impostazione globale di **Git**) distinguendo tra i permessi di amministrazione `root` e l'utente reale che esegue lo script (`$SUDO_USER`).
 

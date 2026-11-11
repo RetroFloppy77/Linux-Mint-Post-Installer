@@ -1,4 +1,4 @@
-# Documentazione Script Post-Installazione (`lmpi.sh`)
+# Documentazione Script ## Post-Installazione
 
 ---
 

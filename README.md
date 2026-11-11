@@ -24,8 +24,6 @@ Inoltre, gestisce in modo sicuro le configurazioni utente (come `pipx` e l'impos
 
 ## 🚀 Guida all'Uso da Terminale
 
-Segui questi passaggi per scaricare, configurare ed eseguire lo script sul tuo sistema.
-
 ### Assegnazione dei Permessi di Esecuzione
 
 Rendi lo script eseguibile con il comando `chmod`:

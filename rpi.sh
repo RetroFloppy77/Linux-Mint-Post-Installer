@@ -27,7 +27,7 @@ fi
 echo "=========================================================="
 echo "Avvio post-installazione per l'utente: $REAL_USER"
 echo "Aggiornamento dei repository del sistema..."
-apt update && apt upgrade -y
+apt update && apt full-upgrade -y
 echo "=========================================================="
 
 # ------------------------------------------------------------------------------
@@ -130,14 +130,14 @@ apt install neovim micro -y
 # ------------------------------------------------------------------------------
 
 echo "Installazione pacchetto Flatpak (VSCodium)..."
-# Assicura la presenza di Flatpak e del repository Flathub
+# Assicura la presenza di Flatpak tramite apt
 if ! command -v flatpak &> /dev/null; then
     apt install -y flatpak
 fi
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# VSCodium (Versione 100% open source di VS Code)
-flatpak install flathub com.vscodium.codium -y
+# Configura il repository Flathub e installa VSCodium nel contesto dell'utente reale
+sudo -u "$REAL_USER" flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+sudo -u "$REAL_USER" flatpak install --user flathub com.vscodium.codium -y
 
 # ------------------------------------------------------------------------------
 # PULIZIA FINALE

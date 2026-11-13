@@ -101,12 +101,17 @@ echo "Installazione: Git e utility per il terminale..."
 apt install git tig -y
 
 # ------------------------------------------------------------------------------
-# 6. SVILUPPO (PYTHON, BASH, LUA, EDITOR)
+# 6. SVILUPPO (PYTHON, BASH, LUA, SDL2, EDITOR)
 # ------------------------------------------------------------------------------
 
 echo "Installazione: Strumenti di compilazione di sistema (build-essential)..."
 # build-essential: Compilatori base (gcc, g++, make).
 apt install build-essential -y
+
+echo "Installazione: Librerie di sviluppo SDL2 complete (SDL2, image, mixer, ttf, gfx, net)..."
+# libsdl2-dev e associate: Kit di sviluppo completo per la creazione di videogiochi
+# e applicazioni multimediali ad alte prestazioni in C/C++.
+apt install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libsdl2-gfx-dev libsdl2-net-dev -y
 
 echo "Installazione: Pacchetti di sistema essenziali per Python 3..."
 # python3-pip, venv, full, dev per la gestione completa di Python.
